@@ -1,13 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { getNewsList } from "./_libs/microcms";
-import { NEWS_LIST_LIMIT } from "./_constants";
+import { TOP_NEWS_LIMIT } from "./_constants";
 import NewsList from "@/app/_components/NewsList";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export default async function Home() {
   const data = await getNewsList({
-    limit: NEWS_LIST_LIMIT,
+    limit: TOP_NEWS_LIMIT,
   });
 
   //JavaScriptのマイ定数
